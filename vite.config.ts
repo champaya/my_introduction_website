@@ -8,4 +8,5 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   base: '/my_introduction_website/',
+  publicDir: 'public',
 });

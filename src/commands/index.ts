@@ -12,15 +12,14 @@ export const AVAILABLE_COMMANDS = {
   help: "Show available commands",
   about: "Display information about me",
   skills: "List technical skills",
-  projects: "Show portfolio projects",
-  contact: "Display contact information",
   certifications: "Show professional certifications",
-  clear: "Clear terminal history",
-  theme: "Change terminal theme (classic/modern/hacker)",
+  projects: "Show portfolio projects",
   download: "Download resume PDF",
+  contact: "Display contact information",
+  clear: "Clear terminal history"
 };
 
-const RESUME_URL = "/assets/skill.pdf";
+const RESUME_URL = "/my_introduction_website/assets/skill.pdf";
 
 /**
  * コマンドを処理し、適切なレスポンスを返す関数
@@ -81,34 +80,34 @@ export const handleCommand = (command: string): CommandResponse => {
         languages: [
           { name: "Java", level: 70 },
           { name: "Python", level: 75 },
-          { name: "HTML/CSS", level: 85 },
+          { name: "HTML", level: 85 },
           { name: "TypeScript", level: 85 },
           { name: "SQL", level: 70 },
           { name: "Dart", level: 30 },
         ],
         framework: [
-          { name: "Spring Boot", level: 85 },
+          { name: "Spring Boot", level: 75 },
           { name: "Flask", level: 75 },
           { name: "React", level: 90 },
           { name: "Angular", level: 85 },
-          { name: "Vue", level: 75 },
-          { name: "Flutter", level: 75 },
+          { name: "Vue", level: 60 },
+          { name: "Flutter", level: 40 },
         ],
         infrastructure: [
-          { name: "AWS", level: 85 },
-          { name: "GCP", level: 75 },
-          { name: "Azure", level: 75 },
+          { name: "AWS", level: 65 },
+          { name: "GCP", level: 30 },
+          { name: "Azure", level: 20 },
           { name: "Windows", level: 75 },
           { name: "Linux", level: 75 },
-          { name: "Mac", level: 75 },
+          { name: "Mac", level: 50 },
         ],
         tools: [
-          { name: "Git", level: 85 },
-          { name: "SVN", level: 75 },
+          { name: "Git", level: 75 },
+          { name: "SVN", level: 85 },
           { name: "VScode", level: 80 },
-          { name: "Cursor", level: 90 },
-          { name: "Gen AI", level: 75 },
-          { name: "Docker", level: 80 },
+          { name: "Cursor", level: 95 },
+          { name: "Gen AI", level: 95 },
+          { name: "Docker", level: 50 },
         ],
       },
     };
@@ -287,6 +286,14 @@ export const handleCommand = (command: string): CommandResponse => {
   if (cmd === "clear") {
     return {
       type: "clear",
+      content: null,
+    };
+  }
+
+  // gameコマンドの処理
+  if (cmd === "game") {
+    return {
+      type: "game",
       content: null,
     };
   }

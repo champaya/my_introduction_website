@@ -28,7 +28,8 @@ export interface CommandResponse {
     | "download"
     | "contact"
     | "clear"
-    | "error";
+    | "error"
+    | "game";
   /** コマンドの実行結果データ */
   content: any;
 }

@@ -113,8 +113,27 @@ const GUI: React.FC<GUIProps> = ({ onSwitchMode }) => {
             </h2>
             <Contact content={contactContent} />
           </section>
+
+          {/* Tips Section */}
+          <section className="space-y-6 pb-12">
+            <p>
+              Thank you for reading my portfolio. <br/>
+              Please try typing the hidden command <code className="bg-green-500/20 px-2 py-1 rounded">game</code> in the CLI. 
+              You can enjoy the invader game!
+            </p>
+          </section>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="fixed bottom-0 left-0 w-full bg-gray-900/90 backdrop-blur-sm border-t border-green-500/20">
+        <div className="container mx-auto px-4 py-3">
+          <p className="text-center text-sm text-gray-400">
+            © {new Date().getFullYear()} Terminal Portfolio by{" "}
+            <span className="text-green-400">HAYATO ITO</span>. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
